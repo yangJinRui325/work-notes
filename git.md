@@ -20,5 +20,6 @@ git log
 git log --pretty=oneline
 
 //这是一次错误提交
+//这是第二次错误提交
 
 ```
