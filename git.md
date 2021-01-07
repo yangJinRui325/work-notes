@@ -19,6 +19,14 @@ git log
 //查看历史记录简略信息
 git log --pretty=oneline
 
-//这是一次错误提交
+//命令历史,记录每一次操作，包括reset
+git reflog
+
+//版本回退，在git中HEAD代表当前的版本,上一个版本是HEAD^,上上一个版本是HEAD^^,向上100个版本为HEAD~100
+git reset --hard HEAD^
+git reset --hard commit_id
+
+
+
 
 ```
