@@ -19,5 +19,6 @@ git log
 //查看历史记录简略信息
 git log --pretty=oneline
 
+//这是一次错误提交
 
 ```
