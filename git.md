@@ -26,4 +26,22 @@ git reflog
 git reset --hard HEAD^
 git reset --hard commit_id
 
+//三个概念  工作区(当前操作)>>>>>暂存区(add以后)>>>>>仓库(commit以后)
+
+//查看工作区和暂存区的区别
+git diff
+
+//查看暂存区和仓库的区别
+git diff --cached
+
+//查看工作区和仓库的区别
+git diff HEAD <filename>
+
+//当前操作添加到暂存区
+git add <file>
+git add .
+git add -A
+
+
+
 ```
