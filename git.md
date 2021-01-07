@@ -24,7 +24,7 @@ git reflog
 
 //版本回退，在git中HEAD代表当前的版本,上一个版本是HEAD^,上上一个版本是HEAD^^,向上100个版本为HEAD~100
 git reset --hard HEAD^
-git reset --hard commit_id
+git reset --hard <commit_id>
 
 //三个概念  工作区(当前操作)>>>>>暂存区(add以后)>>>>>仓库(commit以后)
 
@@ -42,6 +42,8 @@ git add <file>
 git add .
 git add -A
 
+//将暂存区提交到版本库
+git commit -m <commit_describe>
 
 
 ```
