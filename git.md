@@ -26,5 +26,4 @@ git reflog
 git reset --hard HEAD^
 git reset --hard commit_id
 
-//这是工作区
 ```
