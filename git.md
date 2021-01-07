@@ -26,5 +26,5 @@ git reflog
 git reset --hard HEAD^
 git reset --hard commit_id
 
-//提交一版到仓库
+//提到暂存区
 ```
