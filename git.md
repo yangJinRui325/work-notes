@@ -7,13 +7,17 @@ git init
 git config --global user.name "Your Name"
 git config --global user.emial "emial@example.com
 
-//查看仓库的当前状态(增删改提等)
+//查看仓库的当前状态(增删改等)
 git status
 
 //查看difference
 git diff
 
+//查看历史记录
+git log
 
+//查看历史记录简略信息
+git log --pretty=oneline
 
 
 ```
