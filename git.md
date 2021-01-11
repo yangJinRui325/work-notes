@@ -15,9 +15,8 @@ git diff
 
 #查看历史记录
 git log
-
-#查看历史记录简略信息
-git log --pretty=oneline
+git log --pretty=oneline    #查看历史记录简略信息
+git log --graph #查看分支合并图
 
 #命令历史,记录每一次操作，包括reset
 git reflog
@@ -43,16 +42,43 @@ git commit -m <commit_describe>
 
 #将本地版本仓库提交到远程库
 git push
+git push -u origin master   #第一次提交时候加-u会添加和远程库分支的关联
 
 #版本回退：在git中HEAD代表当前的版本,上一个版本是HEAD^,上上一个版本是HEAD^^,向上100个版本为HEAD~100
 git reset --hard HEAD^
 git reset --hard <commit_id>
 
-#如果工作区有修改，还没有add，想直接丢弃工作区的修改
+#如果工作区有修改，还没有add，想直接丢弃工作区的修改。换言之就是：用版本库的直接替换工作区的版本
 git checkout -- <file>
 
 #如果修改了内容，并且add到暂存区，想丢弃修改，分两步：1、回退暂存区 2、清空工作区
 git reset HEAD <file>   #会回到上面的操作，然后想清空工作区，继续如上操作
+
+#关联远程库
+git remote add origin <xxxxxxx>
+
+#分支相关操作
+
+#查看分支
+git branch
+git branch -a   #所有分支，包含远程的分支
+
+#创建分支
+git branch <name>
+
+#切换分支
+git switch <name>   #新版本命令
+git checkout <name>
+
+#创建加切换分支
+git switch -c <name>
+git checkout -b <name>
+
+#合并某分支到当前分支
+git merge <name>
+
+#删除分支
+git branch -d <name>
 
 
 ```
