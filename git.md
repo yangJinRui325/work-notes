@@ -74,11 +74,30 @@ git checkout <name>
 git switch -c <name>
 git checkout -b <name>
 
-#合并某分支到当前分支
-git merge <name>
-
 #删除分支
 git branch -d <name>
+
+#合并某分支到当前分支（默认是Fast forward模式；这种模式下删除分支，会丢掉分支信息）
+git merge <name>
+#分支合并（强制禁用Fast forward模式；merge时生成新的commit）
+git merge --no-ff -m <commit-message> <branch-name>
+#拉取某个指定提交的代码
+git cherry-pick <commit-id>
+
+#工作现场存储（当临时要改一个bug，但是当前还没改完不可提交，可以先暂存）
+git stash
+#查看暂存列表
+git stash list
+
+#两种方式恢复当前暂存的工作区
+#第一种
+git stash apply #恢复后需要手动删除
+git stash drop  #删除
+#第二种
+git stash pop   #恢复的同时吧stash删除
+
+#恢复指定的stash
+git stash apply stash@{0}
 
 
 ```
