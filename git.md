@@ -76,6 +76,7 @@ git checkout -b <name>
 
 #删除分支
 git branch -d <name>
+git branch -D <name>    #强制删除分支
 
 #合并某分支到当前分支（默认是Fast forward模式；这种模式下删除分支，会丢掉分支信息）
 git merge <name>
@@ -99,5 +100,9 @@ git stash pop   #恢复的同时吧stash删除
 #恢复指定的stash
 git stash apply stash@{0}
 
+#将本地分支和远程分支关联
+git branch --set-upstream-to <branch-name> origin/<branch-name>
 
+#在本地创建和远程分支对应的分支
+git checkout -b branch-name origin/branch-name
 ```
