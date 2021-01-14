@@ -105,4 +105,32 @@ git branch --set-upstream-to <branch-name> origin/<branch-name>
 
 #在本地创建和远程分支对应的分支
 git checkout -b branch-name origin/branch-name
+
+#rebase操作可以把本地未push的分叉提交历史整理成直线
+git rebase
+
+#创建标签
+#打一个新标签
+git tag <name>
+
+#查看标签
+git tag
+
+#查看标签信息
+git show <tagname>
+
+#指定标签信息
+git tag -a <tagname> -m "blablabla..."
+
+#推送一个本地标签
+git push origin <tagname>
+
+#推送全部未推送过的本地标签
+git push origin --tags
+
+#删除一个本地标签
+git tag -d <tagname>
+
+#删除一个远程标签
+git push origin :refs/tags/<tagname>
 ```
